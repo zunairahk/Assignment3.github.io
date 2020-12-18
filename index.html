@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="myClass" lang="en">
+<head>
+  <title>Assignment#3</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="password.js"></script>
+  <script src="generatePassword.js"></script>
+</head>
+<body>
+  <br><center><label>LOGIN WITH MASTER PASSWORD:</label><br>
+  <input type="password" id="M_pass" oninput="Mpassword()">
+  <a href="viewDetails.php"><input type="submit" value="GO" onclick="Mpassword()"></a><br><br></center>
+
+  <center><h1>OR</h1></center>
+
+  <form method="POST" action="db.php">
+      Title:<br><input type="text" name="title"><br><br>
+      Username:<br><input type="text" name="username"><br><br>
+      <label>Password:</label><br><input type="text" name="password"><br><br>
+      <progress max="100" value="0" id="strength" style="width: 230 px;"></progress><br><br>
+      <!-- <script>
+        var pass=document.getElementByName("password")
+        pass.addEventListener("keyup",function(){
+          checkPassword(pass.value)
+        })
+        function checkPassword(password)
+        {
+          var strengthBar=document.getElementById("strength")
+          var strength=0;
+
+          if (passsword.match(/[a-zA-z0-9][a-a-zA-z0-9]+/)) 
+          {
+              strength+=1;
+          } 
+          if (password.match(/[~<>?]+/)) 
+          {
+            strength+=1;
+          } 
+          if (password.match(/[!@$%^&*()]+/))
+          {
+            strength+=1;
+          }
+          if (password.length > 5)
+          {
+            strength+=1;
+          }
+          switch (strength) {
+            case 0:
+              strengthBar.value=20;
+              break;
+
+            case 1:
+              strengthBar.value=40;
+              break;
+
+            case 2:
+              strengthBar.value=60;
+              break;
+
+            case 3:
+              strengthBar.value=80;
+              break;
+
+            case 4:
+              strengthBar.value=100;
+              break;
+          }
+        }
+      </script> -->
+
+
+      Repeat:<br><input type="text" name="password"><br><br>
+      URL:<br><input type="url" name="url"><br><br>
+      <input type="submit"><br>
+  </form>
+</body>
+</html>
